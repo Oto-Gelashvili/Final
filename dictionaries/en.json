@@ -1,0 +1,11 @@
+{
+  "home": {
+    "desc": "Service Marketplace",
+    "omw": "Coming Soon",
+    "btn": "Create Product"
+  },
+  "header": {
+    "aboutLink": "About Us",
+    "home": "Home"
+  }
+}
