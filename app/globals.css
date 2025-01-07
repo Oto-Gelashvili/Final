@@ -1,12 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.light {
+  --background-color: #f5f3f7;
+  --primary-color: #a357fb;
+  --text-color: #fff;
+  --hover-color: #ffb54e;
+  /* or #FF9F1C */
+  --active-color: #b6aac2;
+}
 
+.dark {
+  --background-color: #171717;
+  --primary-color: #a357fb;
+
+  --text-color: #fff;
+  --hover-color: #ffb54e;
+  --active-color: #b6aac2;
+}
+.logo-right,
+.logo-left {
+  fill: var(--hover-color);
+}
+.logo-mid {
+  fill: #00ff91;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+ul {
+  list-style: none;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,8 +52,60 @@
   }
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+main {
+  background-color: var(--background-color);
+}
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  font-family: 'Lexend', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+}
+.home {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.home h1 {
+  font-size: 3.2rem;
+}
+.home span {
+  color: var(--hover-color);
+}
+.home h1 {
+  color: var(--primary-color);
+}
+.home h2 {
+  font-size: 2.4rem;
+  color: var(--active-color);
+}
+.home .homeBtn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 1.2rem 4.8rem;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.home .homeBtn:hover {
+  background-color: var(--hover-color);
+}
+.home .homeBtn:active {
+  background-color: var(--active-color);
 }
